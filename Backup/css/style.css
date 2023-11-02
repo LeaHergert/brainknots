@@ -290,19 +290,3 @@ footer a {
     white-space: pre-wrap;
   }
 }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (min-height: 700px)
-and (max-width: 500px)  {
-  .videodivider {
-    height: 80vh;
-  }
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (min-height: 850px)
-and (max-width: 500px) {
-  .videodivider {
-    height: 65vh;
-  }
-}
-
