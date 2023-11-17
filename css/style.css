@@ -50,6 +50,17 @@ h3 {
   font-size: 1.5em;
 }
 
+.icon {
+  background: url(../images/logo3.png);
+    height: 1.15em;
+    width: 0.7em;
+    display: inline-block;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: sub;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -193,8 +204,8 @@ footer a {
   text-decoration: none;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Small devices (small laptops, tablets and phones, 1100px and down) */
+@media only screen and (max-width: 1100px) {
   body {
     max-width: 100%;
     overflow-x: hidden;
@@ -259,7 +270,7 @@ footer a {
     top: unset;
     z-index: 1;
     bottom: unset;
-    left: -12vw;
+    
   }
 
   #project {
