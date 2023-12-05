@@ -51,19 +51,19 @@ h3 {
   font-weight: bolder;
   font-size: 3em;
 }
-.explain {
+#explain {
   font-family: "quicksand";
   color: var(--dark-grey);
   text-transform: uppercase;
   font-weight: 200;
-  line-height: 0.4em;
   border-bottom: 1px solid #191c1f;
   text-align: center;
   
 }
-.explain span{
-  font-size: 1em;
+#explain span{
+  font-size: 1em !important;
   background-color: white;
+  padding: 0 5px;
   
 }
 
