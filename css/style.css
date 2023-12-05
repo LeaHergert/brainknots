@@ -68,7 +68,7 @@ h3 {
 }
 
 .icon {
-  background: url(images/logo/logo3.png);
+  background: url(../images/logo/logo3.png);
     height: 1.15em;
     width: 0.75em;
     display: inline-block;
