@@ -136,7 +136,9 @@ a {
 }
 
 .section img{
-  width: 100%;
+  width: auto;
+  height: 80%;
+  justify-self: center;
 }
 
 .solidbtn {
@@ -173,7 +175,7 @@ a {
 .divider h2 {
   background-color: var(--cozy-green);
   color: white;
-  padding: 2em;
+  padding: 2em 5vw;
   text-align: center;
 }
 
@@ -213,15 +215,7 @@ footer a {
     max-width: 100%;
     overflow-x: hidden;
   }
-  header {
-    height: unset;
-    justify-content: space-around;
-  }
-
-  nav {
-    display: none;
-  }
-
+ 
   h1,
   h3 {
     margin: 0.1vh 4vw;
@@ -232,7 +226,7 @@ footer a {
   }
 
   .divider {
-    padding: 6vh 4vw;
+    padding: 6vh 10vw;
   }
 
   .divider h2 {
@@ -264,7 +258,7 @@ footer a {
     line-height: 1.75em;
   }
 
-  .imgright {
+  /* .imgright {
     position: relative;
     right: unset;
     height: auto;
@@ -273,20 +267,20 @@ footer a {
     z-index: 1;
     bottom: unset;
     
-  }
+  } */
 
   #project {
     margin-top: 2vh;
   }
 
-  .imgleft {
+  /* .imgleft {
     position: relative;
     bottom: unset;
     max-height: unset;
     width: unset;
     z-index: 1;
     max-width: 90vw;
-  }
+  } */
   .divider p {
     text-align: left;
   }
@@ -304,27 +298,29 @@ footer a {
   }
 }
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 400px)  {
-  /* h1{
-font-size: 3em;  }
-  h2 {
-    font-size: 2em;
-    font-weight: 300;
+@media only screen and (max-width: 800px)  {
+  .section .info +  img{
+   padding-top: 4vh;
   }
-  p{
-  font-size: 2em;
-  } */
+  
+  header {
+    height: unset;
+    justify-content: space-around;
+  }
 
+  nav {
+    display: none;
+  }
+
+
+}
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (max-width: 400px)  {
+  
   .logo{
     font-size: 2em;
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (min-height: 850px)
-and (max-width: 500px) {
-  .videodivider {
-    height: 65vh;
-  }
-}
+
 
