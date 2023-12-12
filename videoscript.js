@@ -33,4 +33,18 @@ function startVideo() {
     .catch((err) => {
       console.error("Error attempting to enable full-screen mode:", err);
     });
-}
+};
+
+
+
+// Detect device orientation and adjust video
+window.addEventListener('orientationchange', function () {
+    const orientation = window.orientation;
+    if (orientation === 90 || orientation === -90) {
+        // Landscape orientation
+        videoPlayer.style.objectFit = 'contain'; // Adjust object fit as needed
+    } else {
+        // Portrait or other orientation
+        videoPlayer.style.objectFit = 'cover'; // Reset to cover
+    }
+});
