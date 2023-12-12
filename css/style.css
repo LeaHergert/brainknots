@@ -24,8 +24,7 @@ html {
 
 body {
   margin: 0;
-  padding-top: 4vh;
-  display: gridS;
+  display: grid;
 }
 
 h1,
@@ -58,24 +57,22 @@ h3 {
   font-weight: 200;
   border-bottom: 1px solid #191c1f;
   text-align: center;
-  
 }
-#explain span{
+#explain span {
   font-size: 1em !important;
   background-color: white;
   padding: 0 5px;
-  
 }
 
 .icon {
   background: url(../images/logo/logo3.png);
-    height: 1.15em;
-    width: 0.75em;
-    display: inline-block;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    vertical-align: sub;
+  height: 1.15em;
+  width: 0.75em;
+  display: inline-block;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: sub;
 }
 
 header {
@@ -85,7 +82,8 @@ header {
   max-width: 95vw;
   height: 20vh;
   padding: 0 5vw;
-    margin: 0 1.5em 0 2.5em;
+  padding-top: 4vh;
+  margin: 0 1.5em 0 2.5em;
 }
 
 nav {
@@ -97,6 +95,7 @@ nav a {
   font-family: "quicksand";
   color: var(--cozy-green);
   font-weight: bold;
+  padding-right: 1em;
 }
 a {
   text-decoration: none;
@@ -119,12 +118,9 @@ a {
   display: grid;
   grid-template-columns: 40% 1fr;
 }
-.right{
-  grid-template-columns: 1fr 40% ;
-
+.right {
+  grid-template-columns: 1fr 40%;
 }
-
-
 
 .section p {
   font-family: "quicksand";
@@ -135,7 +131,7 @@ a {
   scroll-margin-top: 20vh;
 }
 
-.section img{
+.section img {
   width: auto;
   height: 80%;
   justify-self: center;
@@ -186,10 +182,10 @@ a {
 }
 
 .videodivider {
-  padding: 15vh 3vw 20vh 3vw;
+  height: 100vh;
 }
 
-video {
+.videodivider img {
   max-height: 55vh;
   max-width: 90vw;
 }
@@ -215,7 +211,7 @@ footer a {
     max-width: 100%;
     overflow-x: hidden;
   }
- 
+
   h1,
   h3 {
     margin: 0.1vh 4vw;
@@ -298,15 +294,15 @@ footer a {
   }
 }
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 800px)  {
-  .section .info +  img{
-   padding-top: 4vh;
+@media only screen and (max-width: 800px) {
+  .section .info + img {
+    padding-top: 4vh;
   }
-  .section img{
+  .section img {
     width: 100%;
     height: auto;
   }
-  
+
   header {
     height: unset;
     justify-content: space-around;
@@ -315,16 +311,10 @@ footer a {
   nav {
     display: none;
   }
-
-
 }
 /* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 400px)  {
-  
-  .logo{
+@media only screen and (max-width: 400px) {
+  .logo {
     font-size: 2em;
   }
 }
-
-
-

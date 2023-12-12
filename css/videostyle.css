@@ -1,0 +1,86 @@
+:root {
+    --energizing-violet: #873df5;
+    --optimistic-yellow: #fffd8c;
+    --soft-grey: #d3cfdb;
+    --cozy-green: #036e54;
+    --hopeful-sage: #d3ecd8;
+    --dark-grey: #191c1f;
+    --mouse-grey: #59616a;
+    --bright-grey: #efebf6;
+  }
+  
+  @font-face {
+    font-family: "darumadropone";
+    src: url("DarumadropOne-Regular.ttf");
+  }
+  @font-face {
+    font-family: "quicksand";
+    src: url("Quicksand-VariableFont_wght.ttf");
+  }
+
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+  }
+
+  #video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  #overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 3em;
+    height: fit-content;
+    display: none;
+    align-content: space-evenly;
+    justify-items: center;
+    background-color: rgb(255 255 255 / 84%);
+    
+  }
+
+  #overlay p {
+    font-family: 'quicksand';
+    font-size: 3em;
+  }
+  #next-video-buttons {
+    gap: 20px;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: "quicksand";
+    font-size: 3em;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--energizing-violet);
+    color: white;
+    padding: 0.1em 1em;
+    border: none;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    height: fit-content;
+    width: fit-content;
+  }
+
+  #play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

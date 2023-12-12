@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link rel="stylesheet" href="css/videostyle.css">
+  </head>
+  <body>
+    <div id="video-container">
+      <video id="video-player" controls>
+        <source src="VideoJetskiTour.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <button id="play-button" onclick="startVideo()">Play</button>
+
+      <div id="overlay">
+        <p>Choose the next video</p>
+        <div id="next-video-buttons">
+          <button onclick="playNextVideo('Fisch.mp4')">Next Video 1</button>
+          <button onclick="playNextVideo('VideoJetskiTour.mp4')">
+            Next Video 2
+          </button>
+        </div>
+      </div>
+    </div>
+<script src="videoscript.js"></script>    
+</body>
+</html>
