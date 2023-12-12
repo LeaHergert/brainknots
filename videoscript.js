@@ -2,6 +2,7 @@
 const videoPlayer = document.getElementById("video-player");
 const overlay = document.getElementById("overlay");
 const playButton = document.getElementById("play-button");
+const landscapeInstruction = document.getElementById('landscape-instruction');
 
 videoPlayer.addEventListener("ended", function () {
   // Show overlay with next video options
