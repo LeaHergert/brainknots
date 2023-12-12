@@ -188,7 +188,7 @@ a {
 
 .videodivider img {
   max-height: 55vh;
-  max-width: 90vw;
+  max-width: 100%;
 }
 
 footer {
@@ -306,6 +306,7 @@ footer a {
 
   header {
     height: unset;
+    margin: unset;
     justify-content: space-around;
   }
 
