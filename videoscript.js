@@ -35,8 +35,6 @@ function startVideo() {
     });
 };
 
-
-
 // Detect device orientation and adjust video
 window.addEventListener('orientationchange', function () {
     const orientation = window.orientation;
