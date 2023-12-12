@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video Player</title>
+    <title>Interactive Video Player</title>
     <link rel="stylesheet" href="css/videostyle.css">
   </head>
   <body>
@@ -27,10 +27,16 @@
     </div>
 
     <div id="landscape-instruction">
-        <p>Please switch to landscape mode for the best viewing experience.</p>
-        <button onclick="dismissLandscapeInstruction()">Dismiss</button>
+      <p>Für das optimale Anzeigeerlebnis, wechsel bitte in den Querformatmodus.</p>
+      <button onclick="dismissLandscapeInstruction()">Ignorieren</button>
     </div>
-    
-<script src="videoscript.js"></script>    
-</body>
+
+    <div id="choices">
+      <h2>Choose your next adventure:</h2>
+      <button onclick="playNextVideo('Adventure1.mp4')">Adventure 1</button>
+      <button onclick="playNextVideo('Adventure2.mp4')">Adventure 2</button>
+    </div>
+
+    <script src="videoscript.js"></script>
+  </body>
 </html>
