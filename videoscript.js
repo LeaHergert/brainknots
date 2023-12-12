@@ -46,3 +46,21 @@ window.addEventListener('orientationchange', function () {
         videoPlayer.style.objectFit = 'cover'; // Reset to cover
     }
 });
+
+// Show landscape instruction if not in landscape mode
+if (window.innerHeight > window.innerWidth) {
+    landscapeInstruction.style.display = 'block';
+}
+
+function dismissLandscapeInstruction() {
+    landscapeInstruction.style.display = 'none';
+}
+
+// Listen for orientation changes
+window.addEventListener('orientationchange', function () {
+    if (window.innerHeight > window.innerWidth) {
+        landscapeInstruction.style.display = 'block';
+    } else {
+        landscapeInstruction.style.display = 'none';
+    }
+});
