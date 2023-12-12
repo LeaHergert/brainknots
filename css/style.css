@@ -101,6 +101,7 @@ a {
   text-decoration: none;
 }
 .background {
+  width: 100vw;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
@@ -223,6 +224,7 @@ footer a {
 
   .divider {
     padding: 6vh 10vw;
+    height: fit-content;
   }
 
   .divider h2 {
@@ -235,10 +237,9 @@ footer a {
   }
 
   .section {
-    display: flex;
-    flex-direction: column;
     height: fit-content;
     margin: unset;
+    grid-template-columns: auto;
   }
 
   .text {
