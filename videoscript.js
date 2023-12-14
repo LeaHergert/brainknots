@@ -1,12 +1,14 @@
-// Video JS
-const videoPlayer = document.getElementById("video-player");
-const overlay = document.getElementById("overlay");
-const playButton = document.getElementById("play-button");
-const landscapeInstruction = document.getElementById('landscape-instruction');
+// videoscript.js
 
-videoPlayer.addEventListener("ended", function () {
+const videoPlayer = document.getElementById('video-player');
+const overlay = document.getElementById('overlay');
+const landscapeInstruction = document.getElementById('landscape-instruction');
+const choicesContainer = document.getElementById('choices');
+const playButton = document.getElementById("play-button");
+
+videoPlayer.addEventListener('ended', function () {
   // Show overlay with next video options
-  overlay.style.display = "grid";
+  overlay.style.display = 'grid';
 });
 
 function playNextVideo(nextVideoSource) {
@@ -65,3 +67,37 @@ window.addEventListener('orientationchange', function () {
         landscapeInstruction.style.display = 'none';
     }
 });
+
+// Function to show interactive choices based on the current video
+function showChoices() {
+    choicesContainer.style.display = 'block';
+  
+    // Clear existing choices
+    choicesContainer.innerHTML = '';
+  
+    // Define choices based on the current video
+    const currentVideoSource = videoPlayer.src;
+    let choices = [];
+  
+    if (currentVideoSource.endsWith('VideoJetskiTour.mp4')) {
+      // Choices for VideoJetskiTour
+      choices = [
+        { label: 'Continue with Fishing', videoSource: 'Fisch.mp4' },
+        { label: 'Explore another Jetski Tour', videoSource: 'VideoJetskiTour.mp4' },
+      ];
+    } else if (currentVideoSource.endsWith('Fisch.mp4')) {
+      // Choices for Fisch
+      choices = [
+        { label: 'Continue Fishing', videoSource: 'Fisch-Part2.mp4' },
+        { label: 'Return to Jetski Tour', videoSource: 'VideoJetskiTour.mp4' },
+      ];
+    }
+  
+    // Create buttons for each choice
+    choices.forEach(choice => {
+      const button = document.createElement('button');
+      button.textContent = choice.label;
+      button.onclick = () => playNextVideo(choice.videoSource);
+      choicesContainer.appendChild(button);
+    });
+  }
