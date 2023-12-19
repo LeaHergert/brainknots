@@ -230,6 +230,20 @@ footer a {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 1300px) and (min-width: 800px) {
+  .fullscreenSection .text{
+    display: grid !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .wrap{
+    float: unset;
+    margin: unset;
+    height: 40vh !important;
+    align-self: center;
+  }
+}
+
 /* Small devices (small laptops, tablets and phones, 1100px and down) */
 @media only screen and (max-width: 1100px) {
   body {
@@ -315,7 +329,7 @@ footer a {
     max-width: 80vw;
   }
   footer {
-    white-space: pre-wrap;
+    font-size: larger;
   }
 }
 /* Extra small devices (phones, 600px and down) */
@@ -339,8 +353,11 @@ footer a {
   }
 }
 /* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .logo {
     font-size: 2em;
+  }
+  footer{
+    white-space: pre-line;
   }
 }
