@@ -6,6 +6,7 @@
   --hopeful-sage: #d3ecd8;
   --dark-grey: #191c1f;
   --mouse-grey: #59616a;
+  --dark-grey: #d3cfdb;
   --bright-grey: #efebf6;
 }
 
@@ -18,49 +19,182 @@
   src: url("Quicksand-VariableFont_wght.ttf");
 }
 
-body {
-  margin: 0;
-  overflow: hidden;
+body{
+  height: 100vh;
+  background-color: #191c1f;
 }
 
-#video-container {
+.slider-container {
   position: relative;
+  width: 60vw;
+display: none;
+  /* max-width: 600px; */
+  margin: auto;
+  top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;}
+
+.slider-button {
+  position: absolute;
+
+  font-family: "quicksand";
+  font-size: 0.75em;
+  text-transform: uppercase;
+  background-color: var(--energizing-violet);
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  /* line-height: 1em; */
+  height: fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+
+
+.prev,
+.next {
+  bottom: 20px;
+  padding: 0.25em 4em;
+  display: none;
+  border-radius: 0;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.last-decision, .change-decision {
+  left: 3%;
+  top: 5%;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: none;
+}
+.close{
+  display: none;
+  position:relative;
+  width: 100%;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+}
+.decision {
+  font-family: "quicksand";
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  transform: translateY(-50%);
+  width: 60%;
+  right: 5%;
+  background: linear-gradient(
+      to bottom right,
+      var(--dark-grey) 74%,
+      rgba(135, 61, 245, 0.15) 100%
+    ),
+    var(--dark-grey);
+  padding: 2%;
+  border-radius: 15px;
+  border-bottom-right-radius: 0;
+}
+.nextSliderCont {
+  display: grid;
+  gap: 1em;
+  position: absolute;
+  grid-template-columns: 20% 20%;
+  bottom: 5%;
+  width: 64%;
+  right: 5%;
+  justify-content: start;
+  justify-items: right;
+}
+
+.choose-next-slider {
+  background: linear-gradient(
+      0.25turn,
+      rgb(255, 253, 140, 0.2) 20%,
+      var(--cozy-green) 100%,
+      white 100%
+    ),
+    linear-gradient(var(--cozy-green) 100%, white 100%) padding-box;
+    border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: none;
+  position: relative;
+}
+
+
+/* Not used */
+.nextSlider2 {
+  /* left: unset;
+  right: 10px; */
+}
+
+/* Show last decision button on the last image */
+/* .slider:last-child .last-decision {
+  display: block;
+} */
+
+/* Show back button only when not on the first image */
+/* .slider:not(:first-child) .prev {
+  display: block;
+} */
+
+/* Show next button only when not on the last image */
+/* .slider:not(:last-child) .next {
+  display: block;
+} */
+
+/* Show buttons to choose the next slider on the last image */
+/* .slider:last-child .choose-next-slider,
+.slider:last-child .skip-next-slider {
+  display: block;
+} */
+
+#video-container {
   width: 100vw;
   height: 100vh;
-  background-color: grey;
+  background-color: black;
+  display: grid;
+  justify-items: center;
+  align-content: space-evenly;
 }
 
 #video-player {
-  width: 100%;
-  height: 100%;
+  width: 60%;
   object-fit: cover;
   opacity: 0.7;
   pointer-events: none;
 }
 
-#overlay {
+.overlay {
   position: absolute;
+  display: none;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   width: 100%;
-  padding: 3em;
-  height: fit-content;
-  display: none;
-  align-content: space-evenly;
-  justify-items: center;
-  background-color: rgb(255 255 255 / 84%);
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.359);
 }
 
-#overlay p {
+/* #overlay p {
   font-family: "quicksand";
   font-size: 3em;
 }
 #next-video-buttons {
   gap: 20px;
-}
+} */
 
-button {
+/* button {
   cursor: pointer;
   font-family: "quicksand";
   font-size: 3em;
@@ -74,27 +208,54 @@ button {
   border-top-left-radius: 15px;
   height: fit-content;
   width: fit-content;
-}
-
+} */
+/* 
 #play-button {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+} */
+
+#landscape-instruction {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-color: white;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+#landscape-instruction button {
+  font-size: 2em;
+  border: none;
+
+  background-color: white;
+  color: var(--energizing-violet);
+}
+/* Add this class to create a page-turning effect */
+.page-turn {
+  transform: rotateY(90deg);
+  transition: transform 0.5s ease-in-out;
 }
 
+/* Add this class to reset the transform after the transition */
+.page-turn-reset {
+  transform: rotateY(0deg);
+}
 @media only screen and (max-width: 800px) {
-button {
+  button {
     font-size: 2em;
-}
-#overlay{
+  }
+  #overlay {
     padding: 2em 0;
-
-}
-#overlay p{
+  }
+  #overlay p {
     font-size: 1em;
-}
-
+  }
 }
 
 @media (orientation: portrait) {
@@ -104,7 +265,7 @@ button {
     position: absolute;
     transform: translateY(-50%);
   }
-  #next-video-buttons{
+  #next-video-buttons {
     display: grid;
   }
 }

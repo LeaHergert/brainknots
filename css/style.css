@@ -122,32 +122,37 @@ a {
   min-height: fit-content;
   z-index: 1;
   display: grid;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+
+}
+.section a {
+  text-align: center;
 }
 
-.right {
+/* .right {
   grid-template-columns: 1fr 40%;
-}
+} */
 
 .section p {
   font-family: "quicksand";
   margin-bottom: 3em;
 }
-#project {
+#project,
+.videosection {
   margin-top: 20vh;
   scroll-margin-top: 20vh;
 }
 
 .section img {
   width: auto;
-  height: 80%;
+  height: 70%;
   max-height: 80vh;
-  justify-self: center;
+  max-width: 90vw;
 }
 
 .fullscreenSection {
   display: block;
-  
 }
 
 .fullscreenSection p {
@@ -215,6 +220,9 @@ a {
   max-width: 100%;
 }
 
+
+
+
 footer {
   padding-top: 9vh;
   background-color: var(--dark-grey);
@@ -231,12 +239,12 @@ footer a {
 }
 
 @media only screen and (max-width: 1300px) and (min-width: 800px) {
-  .fullscreenSection .text{
+  .fullscreenSection .text {
     display: grid !important;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
   }
-  .wrap{
+  .wrap {
     float: unset;
     margin: unset;
     height: 40vh !important;
@@ -249,6 +257,9 @@ footer a {
   body {
     max-width: 100%;
     overflow-x: hidden;
+  }
+  header {
+    height: fit-content;
   }
 
   h1,
@@ -304,7 +315,8 @@ footer a {
     
   } */
 
-  #project {
+  #project,
+  .videosection {
     margin-top: 2vh;
   }
 
@@ -357,7 +369,7 @@ footer a {
   .logo {
     font-size: 2em;
   }
-  footer{
+  footer {
     white-space: pre-line;
   }
 }

@@ -1,14 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Video Player</title>
-    <link rel="stylesheet" href="css/videostyle.css">
-  </head>
-  <body>
-    <div id="video-container">
-      <video id="video-player" controls>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Video Player</title>
+  <link rel="stylesheet" href="css/videostyle.css" />
+  <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+</head>
+
+<body>
+  <div class="slider-container" id="slider1">
+    <img class="slider" src="" alt="Slider Image" />
+    <div class="overlay"></div>
+    <button class="slider-button prev" onclick="prevImage(1)">Zurück</button>
+    <button class="slider-button next" onclick="nextImage(1)">Weiter</button>
+    <div class="nextSliderCont">
+      <button class="slider-button last-decision" onclick="jumpToLastDecision(1)">
+        &lt; Zur letzten Entscheidung
+      </button>
+      <button class="slider-button choose-next-slider" onclick="chooseNextSlider(2)">
+        Auswahl 1
+      </button>
+      <button class="slider-button choose-next-slider nextSlider2" onclick="chooseNextSlider(3)">
+        Auswahl 2
+      </button>
+    </div>
+
+    <div class="decision">
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+      dolore magna aliquyam erat, sed diam voluptua?
+    </div>
+  </div>
+  <div class="slider-container" id="slider2">
+    <img class="slider" src="" alt="Slider Image" />
+    <div class="overlay"></div>
+    <button class="slider-button prev" onclick="prevImage(2)">Zurück</button>
+    <button class="slider-button next" onclick="nextImage(2)">Weiter</button>
+    <button class="slider-button last-decision" onclick="jumpToLastDecision(1)">
+     &lt; Zur letzten Entscheidung
+    </button>
+    <button class="slider-button change-decision" onclick="changeDecision(1)">
+      &lt; Auswahl ändern
+     </button>
+    <div class="nextSliderCont">
+      <button class="slider-button choose-next-slider" onclick="chooseNextSlider(3)">
+        Auswahl 1
+      </button>
+      <button class="slider-button choose-next-slider nextSlider2" onclick="chooseNextSlider(4)">
+        Auswahl 2
+      </button>
+    </div>
+
+    <div class="decision">
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+      dolore magna aliquyam erat, sed diam voluptua?
+    </div>
+  </div>
+  <div class="slider-container" id="slider3">
+    <img class="slider" src="" alt="Slider Image" />
+    <div class="overlay"></div>
+    <button class="slider-button prev" onclick="prevImage(3)">Zurück</button>
+    <button class="slider-button next" onclick="nextImage(3)">Weiter</button>
+    <button class="slider-button last-decision" onclick="jumpToLastDecision(1)">
+     &lt; Zur letzten Entscheidung
+    </button>
+    <button class="slider-button change-decision" onclick="changeDecision(1)">
+      &lt; Auswahl ändern
+     </button>
+     
+    <div class="nextSliderCont">
+      <button class="slider-button choose-next-slider" onclick="chooseNextSlider(3)">
+        Auswahl 1
+      </button>
+      <button class="slider-button choose-next-slider nextSlider2" onclick="chooseNextSlider(4)">
+        Auswahl 2
+      </button>
+      <!-- <form action="index.html" class="slider-button close" opacity="0">
+        <input type="submit" value="Schliessen" />
+    </form> -->
+      <button class="slider-button close" onclick="parent.location='index.html'">
+        Schliessen
+      </button>
+    </div>
+
+    <div class="decision">
+      Schön, dass Du Dich mit dem Thema Depression auseinander gesetzt hast. Ich hoffe, meine Freund:innen und ich konnten Dir helfen. Wir wünschen Dir alles Gute!
+    </div>
+  </div>
+  <!-- <video id="video-player" controls>
         <source src="VideoJetskiTour.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -24,16 +107,16 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div id="landscape-instruction">
-      <p>Für das optimale Anzeigeerlebnis, wechsel bitte in den Querformatmodus.</p>
-      <button onclick="dismissLandscapeInstruction()">Ignorieren</button>
-    </div>
+  <div id="landscape-instruction">
+    <p>
+      Für das optimale Anzeigeerlebnis, wechsel bitte in den Querformatmodus.
+    </p>
+    <button id="close" onclick="dismissLandscapeInstruction()">X</button>
+  </div>
 
-    <div id="choices"></div>
+  <script src="videoscript.js"></script>
+</body>
 
-
-    <script src="videoscript.js"></script>
-  </body>
 </html>
