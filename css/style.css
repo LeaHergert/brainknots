@@ -26,6 +26,8 @@ body {
   margin: 0;
   display: grid;
   overflow-x: hidden;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 h1,
@@ -34,6 +36,12 @@ h4 {
   font-family: "darumadropone";
   color: var(--dark-grey);
   margin: 0;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 40px;
 }
 h3 {
   font-family: "quicksand";
@@ -48,10 +56,10 @@ h3 {
   font-family: "darumadropone";
   color: var(--dark-grey);
   text-transform: uppercase;
-  font-weight: bolder;
+  font-weight: 500;
   font-size: 3em;
 }
-#explain {
+.explain {
   font-family: "quicksand";
   color: var(--dark-grey);
   text-transform: uppercase;
@@ -59,7 +67,7 @@ h3 {
   border-bottom: 1px solid #191c1f;
   text-align: center;
 }
-#explain span {
+.explain span {
   font-size: 1em !important;
   background-color: white;
   padding: 0 5px;
@@ -75,7 +83,6 @@ h3 {
   background-size: cover;
   vertical-align: sub;
 }
-
 header {
   display: flex;
   justify-content: space-between;
@@ -102,7 +109,7 @@ a {
   text-decoration: none;
 }
 .background {
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
@@ -124,7 +131,6 @@ a {
   display: grid;
   grid-template-columns: 50% 50%;
   justify-items: center;
-
 }
 .section a {
   text-align: center;
@@ -144,9 +150,9 @@ a {
   scroll-margin-top: 20vh;
 }
 
-.section img {
-  width: auto;
-  height: 70%;
+.section img,
+#videobg {
+  width: 80%;
   max-height: 80vh;
   max-width: 90vw;
 }
@@ -173,13 +179,15 @@ a {
   text-transform: uppercase;
   background-color: var(--energizing-violet);
   color: white;
-  padding: 1em;
   border: none;
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
-  /* line-height: 1em; */
   height: fit-content;
   width: fit-content;
+  display: inline-flex;
+  padding: 15px 25px;
+  align-items: center;
+  gap: 15px;
 }
 
 .gradientbtn {
@@ -204,32 +212,102 @@ a {
   padding: 2em 5vw;
   text-align: center;
 }
-
+.divider {
+  padding-bottom: 10em;
+}
 .divider p {
   font-family: "quicksand";
-  margin-bottom: 3em;
-  padding: 0 5vw;
+}
+.videosection {
+  grid-template-columns: unset;
+}
+#videobg {
+  height: 40vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: #59616a;
 }
 
-.videodivider {
-  height: 100vh;
+.videosection .text {
+  margin: 0 20vw;
+  text-align: center;
+}
+.column-wrapper {
+  font-family: "quicksand";
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: center;
+  gap: 1em;
+  padding-top: 3em;
+  padding-bottom: 4em;
+  justify-items: center;
+  justify-content: center;
+}
+.hotline h2 {
+  background-color: unset;
+}
+.hotline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  color: var(--dark-grey);
+  text-align: left;
+  border-radius: 30px;
+  border: 3px solid var(--energizing-violet);
+  background: var(--soft-grey);
+}
+.hotline .column-wrapper {
+  padding-top: unset;
+  padding-bottom: 2em;
+}
+.hotline h4 {
+  font-size: 25px;
+  padding: 2em 5vw;
+  text-align: center;
+  color: var(--dark-grey);
+}
+.column a {
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "quicksand";
+  color: var(--dark-grey);
+}
+.fact {
+  text-align: center;
+}
+.fact span {
+  font-weight: 700;
+}
+.column svg {
+  width: 80px;
+  height: 80px;
 }
 
-.videodivider img {
-  max-height: 55vh;
-  max-width: 100%;
+.purpleLine {
+  width: 150px;
+  border-bottom: 2px solid var(--energizing-violet);
+  height: 5vh;
+  margin: 0 auto;
+  margin-bottom: 5vh;
 }
-
-
-
 
 footer {
   padding-top: 9vh;
   background-color: var(--dark-grey);
-  /* height: 15vh; */
+  max-width: 100%;
   text-align: center;
   padding: 10vh 5vw;
-  /* position: relative;*/
+  color: white;
+}
+
+footer p {
+  text-align: left;
+  font-family: "quicksand";
+  /* max-width: 40vw; */
+  margin: 0;
 }
 
 footer a {
@@ -238,6 +316,72 @@ footer a {
   text-decoration: none;
 }
 
+footer .bk {
+  width: 30vw;
+  margin: 0 auto;
+}
+footer .explain,
+footer .explain span,
+footer .logo {
+  color: var(--bright-grey);
+}
+footer .explain {
+  border-bottom: 1px solid var(--soft-grey);
+}
+footer .explain span {
+  background-color: var(--dark-grey);
+  font-size: 0.5em !important;
+}
+.pf {
+  color: var(--bright-grey);
+}
+footer .column-wrapper {
+  text-align: left;
+
+  justify-items: start;
+  justify-content: center;
+}
+
+footer .icon {
+  background: url(../images/logo/logo3w.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer .column svg {
+  width: 24px;
+  height: 24px;
+}
+footer .column, .row{
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 1em;
+}
+
+.row{
+  gap: 1em;
+}
+footer .column a {
+  color: var(--bright-grey);
+  text-align: left;
+}
+
+
+.svgp {
+  display: grid;
+  /* grid-column: 1; */
+  grid-template-columns: 24px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+/* .svgp p{
+  margin: 0;
+} */
+
+.svgp a {
+
+  font-weight: normal;
+}
 @media only screen and (max-width: 1300px) and (min-width: 800px) {
   .fullscreenSection .text {
     display: grid !important;
@@ -249,6 +393,9 @@ footer a {
     margin: unset;
     height: 40vh !important;
     align-self: center;
+  }
+  .hotline {
+    width: 80vw;
   }
 }
 
@@ -271,24 +418,14 @@ footer a {
     font-weight: 300;
   }
 
-  .divider {
-    padding: 6vh 10vw;
-    height: fit-content;
-  }
-
-  .divider h2 {
-    text-align: left;
-    padding: unset;
-  }
-
-  .divider p {
-    padding: unset;
-  }
-
   .section {
     height: fit-content;
     margin: unset;
     grid-template-columns: auto;
+  }
+  .videosection {
+    margin: 15vh 0 0 1em;
+    padding: 1em;
   }
 
   .text {
@@ -304,33 +441,6 @@ footer a {
     line-height: 1.75em;
   }
 
-  /* .imgright {
-    position: relative;
-    right: unset;
-    height: auto;
-    width: 100vw;
-    top: unset;
-    z-index: 1;
-    bottom: unset;
-    
-  } */
-
-  #project,
-  .videosection {
-    margin-top: 2vh;
-  }
-
-  /* .imgleft {
-    position: relative;
-    bottom: unset;
-    max-height: unset;
-    width: unset;
-    z-index: 1;
-    max-width: 90vw;
-  } */
-  .divider p {
-    text-align: left;
-  }
   .gradientbtn {
     background: linear-gradient(#daeedc, #daeedc) padding-box,
       linear-gradient(60deg, #873df5, #fffd8c) border-box;
@@ -350,8 +460,15 @@ footer a {
     padding-top: 4vh;
   }
   .section img {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
+  }
+
+  .hotline {
+    width: 95vw;
+  }
+  .hotline h4 {
+    padding: 1em 5vw;
   }
 
   header {

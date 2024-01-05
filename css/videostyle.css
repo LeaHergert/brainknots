@@ -20,13 +20,17 @@
 }
 
 body{
+  /* overflow: hidden; */
+margin: 0;
   height: 100vh;
   background-color: #191c1f;
 }
 
 .slider-container {
   position: relative;
-  width: 60vw;
+  width: 70vw;
+  aspect-ratio: 3/2;
+
 display: none;
   /* max-width: 600px; */
   margin: auto;
@@ -36,7 +40,7 @@ display: none;
 
 .slider {
   width: 100%;
-  height: 70vh;
+  height: 100%;
   object-fit: cover;}
 
 .slider-button {
@@ -226,7 +230,7 @@ display: none;
   padding: 1em;
   margin: 1em;
   border-radius: 10px;
-  display: grid;
+  display: none;
   grid-template-columns: auto 1fr;
 }
 #landscape-instruction button {
@@ -246,9 +250,28 @@ display: none;
 .page-turn-reset {
   transform: rotateY(0deg);
 }
+@media only screen and (max-width: 1500px) {
+  
+  
+
+}
+
+@media only screen and (max-width: 1100px) {
+  
+  .slider-container{
+    width: 85vw;
+
+  }
+
+}
 @media only screen and (max-width: 800px) {
+  
   button {
     font-size: 2em;
+  }
+  .slider-container{
+    /* width: 100vw; */
+    height: 100vh;
   }
   #overlay {
     padding: 2em 0;

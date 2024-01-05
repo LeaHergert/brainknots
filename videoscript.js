@@ -57,12 +57,12 @@ function showImage(sliderIndex, imageIndex) {
   var chooseNextSliderButton = slider.querySelector(".choose-next-slider");
   var chooseNextSliderButton2 = slider.querySelector(".nextSlider2");
   var decision = slider.querySelector(".decision");
-var nextSliderCont =slider.querySelector(".nextSliderCont");
+  var nextSliderCont =slider.querySelector(".nextSliderCont");
   var prev = slider.querySelector(".prev");
   var next = slider.querySelector(".next");
   var lastDecision = slider.querySelector(".last-decision");
   var close = slider.querySelector(".close");
- var overlay = slider.querySelector(".overlay");
+  var overlay = slider.querySelector(".overlay");
   var isFirstImage = imageIndex === 0;
 
   if (isLastImage) {
@@ -98,7 +98,6 @@ var nextSliderCont =slider.querySelector(".nextSliderCont");
     close.style.display = "block";
     chooseNextSliderButton.style.display = "none";
     chooseNextSliderButton2.style.display = "none";
-    alert("Decision: "+decision.offsetWidth+"    Button: "+close.offsetWidth)
   }
   if (close && !isLastImage) {
     close.style.display = "none";
@@ -106,17 +105,7 @@ var nextSliderCont =slider.querySelector(".nextSliderCont");
  
   //Ensure the currentIndex is set properly
   sliders[sliderIndex - 1].currentIndex = imageIndex;
-  //   for (let i = 1; i <= sliders.length; i++) {
 
-  //     if (i === sliderIndex) {
-  //       // Show the chosen slider
-  //       slider.style.display = "block";
-  //     } else {
-  //       // Hide other sliders
-  //       slider.style.display = "none";
-  //     }
-
-  // }
 }
 
 showImage(1, 0);
@@ -183,65 +172,13 @@ function chooseNextSlider(sliderIndex) {
 // Show the first image of the first slider initially
 showImage(1, 0);
 
-// // Hide other sliders
-// for (let i = 2; i <= sliders.length; i++) {
-//   var slider = document.getElementById(sliders[i - 1].containerId);
-//   slider.style.display = "none";
-// }
 
-// var videoPlayer = document.getElementById('video-player');
-// var overlay = document.getElementById('overlay');
+
 var landscapeInstruction = document.getElementById("landscape-instruction");
-// var choicesContainer = document.getElementById('choices');
-// var playButton = document.getElementById("play-button");
-
-// videoPlayer.addEventListener('ended', function () {
-//   // Show overlay with next video options
-//   overlay.style.display = 'grid';
-// });
-
-// function playNextVideo(nextVideoSource) {
-//   // Hide overlay
-//   overlay.style.display = "none";
-
-//   // Change video source and play
-//   videoPlayer.src = nextVideoSource;
-//   videoPlayer.load();
-//   videoPlayer.play();
-// }
-
-// function startVideo() {
-//   // Trigger full-screen mode
-//   var videoContainer = document.getElementById("video-container");
-//   videoContainer
-//     .requestFullscreen()
-//     .then(() => {
-//       // Once in full-screen mode, play the video
-//       videoPlayer.play();
-//       videoPlayer.style.pointerEvents ="all";
-//       videoPlayer.style.opacity = 1;
-//       playButton.style.display = "none"; // Hide the play button
-//     })
-//     .catch((err) => {
-//       console.error("Error attempting to enable full-screen mode:", err);
-//     });
-// };
-
-// // Detect device orientation and adjust video
-// window.addEventListener('orientationchange', function () {
-//     var orientation = window.orientation;
-//     if (orientation === 90 || orientation === -90) {
-//         // Landscape orientation
-//         videoPlayer.style.objectFit = 'contain'; // Adjust object fit as needed
-//     } else {
-//         // Portrait or other orientation
-//         videoPlayer.style.objectFit = 'cover'; // Reset to cover
-//     }
-// });
-
 // Show landscape instruction if not in landscape mode
-if (window.innerHeight > window.innerWidth) {
-  landscapeInstruction.style.display = "block";
+if(screen.availHeight > screen.availWidth){
+  landscapeInstruction.style.display = "grid";
+  
 }
 
 function dismissLandscapeInstruction() {
@@ -251,42 +188,8 @@ function dismissLandscapeInstruction() {
 // Listen for orientation changes
 window.addEventListener("orientationchange", function () {
   if (window.innerHeight > window.innerWidth) {
-    landscapeInstruction.style.display = "block";
+    landscapeInstruction.style.display = "grid";
   } else {
     landscapeInstruction.style.display = "none";
   }
 });
-
-// // Function to show interactive choices based on the current video
-// function showChoices() {
-//     choicesContainer.style.display = 'block';
-
-//     // Clear existing choices
-//     choicesContainer.innerHTML = '';
-
-//     // Define choices based on the current video
-//     var currentVideoSource = videoPlayer.src;
-//     let choices = [];
-
-//     if (currentVideoSource.endsWith('VideoJetskiTour.mp4')) {
-//       // Choices for VideoJetskiTour
-//       choices = [
-//         { label: 'Continue with Fishing', videoSource: 'Fisch.mp4' },
-//         { label: 'Explore another Jetski Tour', videoSource: 'VideoJetskiTour.mp4' },
-//       ];
-//     } else if (currentVideoSource.endsWith('Fisch.mp4')) {
-//       // Choices for Fisch
-//       choices = [
-//         { label: 'Continue Fishing', videoSource: 'Fisch-Part2.mp4' },
-//         { label: 'Return to Jetski Tour', videoSource: 'VideoJetskiTour.mp4' },
-//       ];
-//     }
-
-//     // Create buttons for each choice
-//     choices.forEach(choice => {
-//       var button = document.createElement('button');
-//       button.textContent = choice.label;
-//       button.onclick = () => playNextVideo(choice.videoSource);
-//       choicesContainer.appendChild(button);
-//     });
-//   }
