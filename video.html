@@ -13,9 +13,30 @@
 </head>
 
 <body>
+
   <div class="slider-container" id="slider1">
+   
     <img class="slider" src="" alt="Slider Image" />
     <div class="overlay"></div>
+    <div class="overlay" id="trigger">
+      <h1>
+          Triggerwarnung: Depressionen und Suizidgedanken
+      </h1>
+      <p>
+          Die folgenden Szenen enthalten sensible Themen im Zusammenhang mit Depressionen und Suizidgedanken. 
+          Wenn du Schwierigkeiten hast, dich mit diesen Themen auseinanderzusetzen, wird dringend empfohlen, diese Inhalte nicht alleine anzusehen oder im schlimmsten Fall sogar ganz zu vermeiden. 
+          Bitte suche Unterstützung bei Freunden, Familie oder professionellen Helfern, wenn du das Bedürfnis verspürst, darüber zu sprechen. 
+          Deine mentale Gesundheit ist wichtig, und es gibt Menschen, die dir helfen können.
+      </p>
+      <div id="btngroup">
+        <button class="slider-button" id="leave" onclick="parent.location='index.html'">
+          Verlassen
+        </button>
+        <button class="slider-button" id="continue" >Fortfahren</button>
+  
+      </div>
+      
+  </div>
     <button class="slider-button prev" onclick="prevImage(1)">Zurück</button>
     <button class="slider-button next" onclick="nextImage(1)">Weiter</button>
     <div class="nextSliderCont">

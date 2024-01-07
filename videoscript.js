@@ -193,3 +193,11 @@ window.addEventListener("orientationchange", function () {
     landscapeInstruction.style.display = "none";
   }
 });
+
+
+var trigger = document.querySelector("#trigger");
+var cont = document.getElementById("continue");
+cont.onclick = function close(){
+ console.log("Click");
+ trigger.style.display = "none";
+}

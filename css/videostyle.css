@@ -19,9 +19,9 @@
   src: url("Quicksand-VariableFont_wght.ttf");
 }
 
-body{
+body {
   /* overflow: hidden; */
-margin: 0;
+  margin: 0;
   height: 100vh;
   background-color: #191c1f;
 }
@@ -31,17 +31,19 @@ margin: 0;
   width: 70vw;
   aspect-ratio: 3/2;
 
-display: none;
+  display: none;
   /* max-width: 600px; */
   margin: auto;
   top: 50%;
-    transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .slider {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;}
+  object-fit: cover;
+}
 
 .slider-button {
   position: absolute;
@@ -59,8 +61,6 @@ display: none;
   cursor: pointer;
 }
 
-
-
 .prev,
 .next {
   bottom: 20px;
@@ -77,16 +77,17 @@ display: none;
   right: 10px;
 }
 
-.last-decision, .change-decision {
+.last-decision,
+.change-decision {
   left: 3%;
   top: 5%;
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   display: none;
 }
-.close{
+.close {
   display: none;
-  position:relative;
+  position: relative;
   width: 100%;
   border-radius: 15px;
   border-top-left-radius: 0;
@@ -129,39 +130,11 @@ display: none;
       white 100%
     ),
     linear-gradient(var(--cozy-green) 100%, white 100%) padding-box;
-    border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   display: none;
   position: relative;
 }
-
-
-/* Not used */
-.nextSlider2 {
-  /* left: unset;
-  right: 10px; */
-}
-
-/* Show last decision button on the last image */
-/* .slider:last-child .last-decision {
-  display: block;
-} */
-
-/* Show back button only when not on the first image */
-/* .slider:not(:first-child) .prev {
-  display: block;
-} */
-
-/* Show next button only when not on the last image */
-/* .slider:not(:last-child) .next {
-  display: block;
-} */
-
-/* Show buttons to choose the next slider on the last image */
-/* .slider:last-child .choose-next-slider,
-.slider:last-child .skip-next-slider {
-  display: block;
-} */
 
 #video-container {
   width: 100vw;
@@ -189,37 +162,36 @@ display: none;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.359);
 }
+#trigger {
+  font-family: quicksand;
+  display: block;
+  z-index: 100;
+  padding: 6em;
 
-/* #overlay p {
-  font-family: "quicksand";
-  font-size: 3em;
-}
-#next-video-buttons {
-  gap: 20px;
-} */
-
-/* button {
-  cursor: pointer;
-  font-family: "quicksand";
-  font-size: 3em;
-  font-weight: 500;
-  text-transform: uppercase;
-  background-color: var(--energizing-violet);
+  box-sizing: border-box;
+  aspect-ratio: 3/2;
+  background-color: rgb(0 0 0 / 78%);
   color: white;
-  padding: 0.1em 1em;
-  border: none;
-  border-bottom-right-radius: 15px;
-  border-top-left-radius: 15px;
-  height: fit-content;
-  width: fit-content;
-} */
-/* 
-#play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
+}
+#trigger h1 {
+  font-size: 4em;
+}
+#trigger p {
+  font-size: 1.5em;
+  line-height: 1.75em;
+  white-space: pre-line;
+  max-width: 90%;
+}
+#btngroup {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  gap: 2em;
+}
+#btngroup button {
+  font-size: 1em;
+  position: relative;
+}
 
 #landscape-instruction {
   position: absolute;
@@ -251,25 +223,18 @@ display: none;
   transform: rotateY(0deg);
 }
 @media only screen and (max-width: 1500px) {
-  
-  
-
 }
 
 @media only screen and (max-width: 1100px) {
-  
-  .slider-container{
+  .slider-container {
     width: 85vw;
-
   }
-
 }
 @media only screen and (max-width: 800px) {
-  
   button {
     font-size: 2em;
   }
-  .slider-container{
+  .slider-container {
     /* width: 100vw; */
     height: 100vh;
   }
