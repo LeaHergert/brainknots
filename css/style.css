@@ -74,7 +74,7 @@ h3 {
 }
 
 .icon {
-  background: url(../images/logo/logo3.png);
+  background: url(../images/logo/logo3.svg);
   height: 1.15em;
   width: 0.75em;
   display: inline-block;
@@ -356,9 +356,10 @@ color: var(--optimistic-yellow);
 .column-wrapper {
   font-family: "quicksand";
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-around;
   justify-content: center;
-  gap: 1em;
+  gap: 3em;
   padding-top: 3em;
   padding-bottom: 4em;
   justify-items: center;
@@ -477,7 +478,7 @@ footer .column-wrapper {
 }
 
 footer .icon {
-  background: url(../images/logo/logo3w.png);
+  background: url(../images/logo/logo3w.svg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
