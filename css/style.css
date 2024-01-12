@@ -64,7 +64,7 @@ h3 {
   color: var(--dark-grey);
   text-transform: uppercase;
   font-weight: 400;
-    border-bottom: 2px solid #191c1f;
+  border-bottom: 2px solid #191c1f;
   text-align: center;
 }
 .explain span {
@@ -94,7 +94,7 @@ header {
   margin: 0 auto;
   width: 100%;
 }
-header a{
+header a {
   text-decoration: none;
 }
 
@@ -140,22 +140,23 @@ a {
 .section a {
   text-align: center;
 }
-.left{
+.left {
   display: block;
   height: 80vh;
 }
-.left .info{
+.left .info {
   display: grid;
   grid-template-columns: 60% 40%;
 }
-.left  h1, .left  h3, .left .text{
+.left h1,
+.left h3,
+.left .text {
   grid-column: 1;
 }
-.left  h1{
-    grid-column: 1/ span 2;
-    padding-bottom: 1em;
+.left h1 {
+  grid-column: 1 / span 2;
+  padding-bottom: 1em;
 }
-
 
 .section p {
   font-family: "quicksand";
@@ -166,8 +167,6 @@ a {
 .videosection {
   /* margin-top: 20vh; */
   scroll-margin-top: 20vh;
-
-
 }
 
 #project {
@@ -182,7 +181,7 @@ a {
   line-height: 36px;
   padding-bottom: 0.5em;
 }
-#project h3{
+#project h3 {
   color: var(--optimistic-yellow);
 }
 #project p {
@@ -190,9 +189,8 @@ a {
   margin-bottom: 1em;
 }
 
-#project .section{
+#project .section {
   gap: 3%;
-
 }
 
 #project .gradientbtn {
@@ -216,17 +214,17 @@ a {
   max-width: 90vw;
 }
 
-.left img{
-      width: unset;
-      max-height: 100vh;
-      /* max-width: 100%; */
-      height: 55vh;
-      /* position: absolute; */
-      grid-row: 3/ span 2;
-      grid-column: 2;
-      /* left: 4%; */
-      /* display: flow; */
-      margin-left: -6em;
+.left img {
+  width: unset;
+  max-height: 100vh;
+  /* max-width: 100%; */
+  height: 55vh;
+  /* position: absolute; */
+  grid-row: 3 / span 2;
+  grid-column: 2;
+  /* left: 4%; */
+  /* display: flow; */
+  margin-left: -6em;
 }
 
 .fullscreenSection {
@@ -253,7 +251,7 @@ a {
   color: white;
   border: none;
   border-radius: 30px 0px;
-cursor: pointer;
+  cursor: pointer;
   height: fit-content;
   width: fit-content;
   display: inline-flex;
@@ -295,16 +293,16 @@ cursor: pointer;
   margin: 0 auto;
 
   text-align: left;
-padding: 0 0  1.5em 0;
+  padding: 0 0 1.5em 0;
 }
 .split h3 {
   max-width: 1300px;
   margin: 0 auto;
   text-align: left;
-padding: 1.5em 0 0 0;
-color: var(--optimistic-yellow);
+  padding: 1.5em 0 0 0;
+  color: var(--optimistic-yellow);
 }
-.split p{
+.split p {
   margin: 0 auto;
   text-align: left;
   column-count: 2;
@@ -317,7 +315,7 @@ color: var(--optimistic-yellow);
   max-width: 1300px;
 }
 
-.split ul{
+.split ul {
   font-family: "quicksand";
   margin: 0 auto;
   text-align: left;
@@ -330,7 +328,7 @@ color: var(--optimistic-yellow);
   line-break: auto; */
   max-width: 1300px;
 }
-.split li{
+.split li {
   margin: 1em 0;
 }
 .videosection {
@@ -371,15 +369,16 @@ color: var(--optimistic-yellow);
   background-color: unset;
 }
 .hotline {
-  position: absolute;
+  /* position: absolute; */
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   width: 60%;
   color: var(--dark-grey);
   text-align: left;
   border-radius: 30px;
   border: 3px solid var(--energizing-violet);
   background: var(--soft-grey);
+  margin: -10vh auto 5vh auto;
 }
 .hotline .column-wrapper {
   padding-top: unset;
@@ -397,7 +396,7 @@ color: var(--optimistic-yellow);
   font-family: "quicksand";
   color: var(--dark-grey);
 }
-.column p a{
+.column p a {
   font-weight: normal;
 }
 .fact {
@@ -456,6 +455,7 @@ footer .logo {
 
 footer .logo {
   width: fit-content;
+  white-space: nowrap;
 }
 
 footer .explain {
@@ -523,6 +523,10 @@ footer .column a {
 
 .svgp a {
   font-weight: normal;
+}
+
+.drop{
+  display: none;
 }
 
 .footerlinks {
@@ -604,6 +608,42 @@ footer .column a {
   footer {
     font-size: larger;
   }
+  .left {
+    width: 100vw;
+    box-sizing: border-box;
+  }
+  .left .info {
+    display: block;
+  }
+  .left h3,
+  .left h1 {
+    margin: unset;
+  }
+  .left img {
+    margin: unset;
+  }
+  .column-wrapper {
+    grid-template-columns: 70%;
+  }
+  .videosection{
+    margin: 5vh 0 0 0;
+    padding: 0;
+  }
+  .videosection .text{
+    padding: 4vh 20vw;
+  }
+  #project{
+    padding-bottom: 0;
+  }
+ footer p{
+  max-width: 80vw;
+  }
+  .footerlinks{
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1em;
+
+  }
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 800px) {
@@ -630,6 +670,9 @@ footer .column a {
 
   nav {
     display: none;
+  }
+  .drop{
+    display: flex;
   }
 }
 /* Extra small devices (phones, 400px and down) */
