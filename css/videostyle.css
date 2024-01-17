@@ -18,6 +18,14 @@
   font-family: "quicksand";
   src: url("Quicksand-VariableFont_wght.ttf");
 }
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
 body {
   /* overflow: hidden; */
@@ -28,14 +36,13 @@ body {
 
 .slider-container {
   position: relative;
-  width: 70vw;
+  /* width: 70vw; */
   aspect-ratio: 3/2;
 
   display: none;
   /* max-width: 600px; */
   margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
+max-height: 100%;
 }
 
 .slider {
@@ -56,8 +63,8 @@ body {
   padding: 0.5em 1em;
   border: none;
   /* line-height: 1em; */
-  height: fit-content;
-  width: fit-content;
+  height: min-content;
+  width:auto;
   cursor: pointer;
 }
 
@@ -167,10 +174,12 @@ body {
   display: block;
   z-index: 100;
   padding: 6em;
+top: unset;
+transform: translateY(0);
 
   box-sizing: border-box;
   aspect-ratio: 3/2;
-  background-color: rgb(0 0 0 / 78%);
+  background-color: #191c1f;;
   color: white;
 }
 #trigger h1 {
@@ -187,6 +196,7 @@ body {
   grid-template-columns: auto auto;
   justify-content: start;
   gap: 2em;
+  padding: 1em 0;
 }
 #btngroup button {
   font-size: 1em;
@@ -194,10 +204,12 @@ body {
 }
 
 #landscape-instruction {
+  font-family: "quicksand";
+
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 10;
+  z-index: 100;
   background-color: white;
   padding: 1em;
   margin: 1em;
@@ -222,12 +234,37 @@ body {
 .page-turn-reset {
   transform: rotateY(0deg);
 }
+
+@media only screen and (min-width: 1500px) {
+  #trigger{
+    padding: 5em;
+    font-size: larger;
+  }
+  #trigger p{
+    font-size: 2em;
+  }
+}
+
 @media only screen and (max-width: 1500px) {
 }
 
 @media only screen and (max-width: 1100px) {
   .slider-container {
     width: 85vw;
+  }
+  #trigger{
+    height: auto;
+    padding: 1em;
+  }
+  #trigger h1{
+    font-size: 2.25em;
+    max-width: unset;
+    margin: 0;
+  }
+  #trigger p{
+    font-size: 1.75em;
+    max-width: unset;
+    margin: 0;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -244,9 +281,18 @@ body {
   #overlay p {
     font-size: 1em;
   }
+  #trigger{
+    height: 100%;
+  }
 }
+@media only screen and (max-width: 600px) {
 
-@media (orientation: portrait) {
+#trigger p{
+  font-size: 1em;
+  max-width: unset;
+}
+}
+@media (orientation: portrait) and (max-width: 600px) {
   #video-player {
     height: auto;
     top: 50%;
@@ -256,4 +302,35 @@ body {
   #next-video-buttons {
     display: grid;
   }
+  .slider-container {
+    width: 100vw;
+    height: auto;
+}
+  #trigger{
+    height: 100vh;
+    width: 100%;
+    background-color: #191c1f;;
+    padding: 3em 1em;
+  }
+  #trigger h1{
+    font-size: 2em;
+  }
+  .nextSliderCont{
+    grid-template-columns: auto auto;
+  }
+  .decision{
+    width: 90%;
+  }
+  .slider-button{
+    width: unset;
+  }
+  
+}
+@media (orientation: portrait) {
+  .slider-container{
+    top: 50%;
+      transform: translateY(-50%);
+
+  }
+
 }
