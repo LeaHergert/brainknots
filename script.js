@@ -18,7 +18,7 @@ const facts = document.getElementById("facts");
 const hHeight = hotline.offsetHeight;
 const fHeight = facts.offsetHeight;
 
-facts.style.marginBottom = hHeight + "px";
+facts.style.marginBottom = hHeight *0.8 + "px";
 
 const mediaQuery = window.matchMedia("(max-width: 600px)");
 
@@ -26,12 +26,15 @@ function drop(nr) {
   if (mediaQuery.matches) {
     const content = document.querySelector(".dropdown-content");
     const drop = document.querySelector("#drop" + nr);
-    const child = document.querySelector("#drop .dropdown-content");
+    const child = document.getElementById(nr);
     const first = drop.firstElementChild;
-    
-    content.style.display = "none";
-    first.style.transform = "rotate(-90)";
-    first.style.transform = "rotate(0)";
-    child.style.display = "grid";
+    if (content.style.display ==="grid"){
+        content.style.display = "none";
+        first.style.transform = "rotate(-90)";
+        child.style.display = "grid";
+    } else{
+        first.style.transform = "rotate(0)";
+        // child.style.display = "grid";
+    }
   }
 }

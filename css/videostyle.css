@@ -183,13 +183,15 @@ transform: translateY(0);
   color: white;
 }
 #trigger h1 {
-  font-size: 4em;
+  font-size: 3em;
+  margin: 0;
 }
 #trigger p {
   font-size: 1.5em;
   line-height: 1.75em;
   white-space: pre-line;
   max-width: 90%;
+  margin-top: 0
 }
 #btngroup {
   display: grid;
