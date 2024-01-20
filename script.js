@@ -22,6 +22,11 @@ facts.style.marginBottom = hHeight *0.8 + "px";
 
 const mediaQuery = window.matchMedia("(max-width: 600px)");
 
+if (mediaQuery.matches) {
+    facts.style.marginBottom = hHeight  + "px";
+}
+
+
 function drop(nr) {
   if (mediaQuery.matches) {
     const content = document.getElementsByClassName(".dropdown-content");
