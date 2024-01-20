@@ -632,8 +632,8 @@ footer .column a {
   }
 
   .split {
-    padding: 1em 3%;
-    width: 94%;
+    padding: 2em 3%;
+    /* width: 94%; */
   }
 
   .split p #leftCol {
@@ -736,6 +736,14 @@ grid-row: unset;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 800px) {
+
+.bk p{
+  margin-top: -5px;
+}
+.explain span{
+  font-size: 0.75em !important;
+
+}
   .section .info + img {
     padding-top: 4vh;
   }
@@ -769,6 +777,11 @@ grid-row: unset;
   .left h1 {
     font-size: 2em;
     padding-bottom: 0;
+  }
+  #twoCol{
+    grid-template-columns: auto;
+    gap: 0;
+    line-break: auto;
   }
 }
 /* Extra small devices (phones, 400px and down) */
