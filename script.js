@@ -24,17 +24,21 @@ const mediaQuery = window.matchMedia("(max-width: 600px)");
 
 function drop(nr) {
   if (mediaQuery.matches) {
-    const content = document.querySelector(".dropdown-content");
+    const content = document.getElementsByClassName(".dropdown-content");
     const drop = document.querySelector("#drop" + nr);
     const child = document.getElementById(nr);
     const first = drop.firstElementChild;
-    if (content.style.display ==="grid"){
-        content.style.display = "none";
-        first.style.transform = "rotate(-90)";
-        child.style.display = "grid";
-    } else{
-        first.style.transform = "rotate(0)";
-        // child.style.display = "grid";
+    
+        
+    for (var i = 0; i < content.length; i++) {
+        content[i].style.display = "none";
+        if (content[i].style.display === "grid") {
+            first.style.transform = "rotate(-90)";
+            child.style.display = "grid";
+        }
     }
-  }
+
+    first.style.transform = "rotate(0)";
+    // child.style.display = "grid";
+}
 }

@@ -808,7 +808,7 @@ grid-row: unset;
   grid-template-columns: 60%;
 } */
   .dropdown-content {
-    display: none;
+    /* display: none; */
     gap: 15px;
     /* position: absolute;
     top: 100%;
