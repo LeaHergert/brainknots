@@ -3,19 +3,31 @@ var sliders = [
   {
     containerId: "slider1",
     images: [
-      "images/background/1.Park.png",
-      "images/background/2.Park.png",
-      "images/background/3.Park.png",
+      "images/carousel/1.Loop-1Tag-Morgensaufwachen.png",
+      "images/carousel/2.Loop-1Tag-MorgensSonne.png",
+      "images/carousel/3.Loop-1Tag-MorgensSpiegel.png",
+      "images/carousel/4.Loop-ErsterTag-AbendsYoga.png",
+      "images/carousel/5.Loop_1Tag-AbendsBuchlesen.png",
+      "images/carousel/6.Loop_1Tag-Abendsschlafen.png",
+      "images/carousel/7.Loop_2Tag-Morgensaufwachen.png",
+      "images/carousel/8.Loop_2Tag-AbendsYoga.png",
+      "images/carousel/9.Loop_2Tag-AbendsYoga(2).png",
+      "images/carousel/10.Loop_2Tag-Abendsschlafen.png",
+      "images/carousel/11.Tag3morgens.png",
     ],
   },
   {
     containerId: "slider2",
     images: [
-      "images/background/2.ParkBohne.png",
-      "https://placekitten.com/g/1000/1000",
-      "https://placekitten.com/g/400/500",
-
-      "https://placekitten.com/g/1000/900",
+      "images/carousel/Loop_1Tag-AbendsBuchlesen-min.jpg",
+      "images/carousel/Loop_1Tag-Abendsschlafen-min.jpg",
+      "images/carousel/Loop_2Tag-Abendsschlafen-min.jpg",
+      "images/carousel/Loop_2Tag-AbendsYoga-min.jpg",
+      "images/carousel/Loop_2Tag-AbendsYoga(2)-min.jpg",
+      "images/carousel/Loop_2Tag-Morgensaufwachen-min.jpg",
+      "images/carousel/Loop-1Tag-MorgensSonne-min.jpg",
+      "images/carousel/Loop-1Tag-MorgensSpiegel-min.jpg",
+      "images/carousel/Loop-ErsterTag-AbendsYoga-min.jpg",
     ],
   },
   {
@@ -49,7 +61,16 @@ function showImage(sliderIndex, imageIndex) {
     );
     console.log(`Slider img ` + imageIndex);
   }
-
+  this.addEventListener("DOMContentLoaded", preloadImages, true);
+ 
+  function preloadImages(e) {
+      var imageArray = new Array("path/image.png", "path/image2.png", "path/image3.png");
+   
+      for (var i = 0; i < imageArray.length; i++) {
+          var tempImage = new Image();
+          tempImage.src = imageArray[i];
+      }
+  }
   sliderImage.src = sliders[sliderIndex - 1].images[imageIndex];
   sliders[sliderIndex - 1].currentIndex = imageIndex;
 
