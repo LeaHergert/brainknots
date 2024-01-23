@@ -115,6 +115,10 @@ background: linear-gradient(306deg, rgba(135, 61, 245, 0.15) 0%, rgba(0, 0, 0, 0
   padding: 2%;
   
 }
+
+.end{
+  display: none !important;
+}
 .nextSliderCont {
   display: grid;
   padding: 10px 20px;
@@ -160,7 +164,7 @@ background: linear-gradient(90deg, rgba(255, 253, 140, 0.20) 17.71%, rgba(0, 0, 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.359);
+  background-color: rgb(0 0 0 / 71%);
 }
 #trigger {
 
@@ -187,7 +191,7 @@ background-color: var(--dark-grey);
   position: relative;
 }
 
-#landscape-instruction {
+.landscape-instruction {
   font-family: "quicksand";
 
   position: absolute;
@@ -201,7 +205,7 @@ background-color: var(--dark-grey);
   display: none;
   grid-template-columns: auto 1fr;
 }
-#landscape-instruction button {
+.landscape-instruction button {
   font-size: 2em;
   border: none;
 
