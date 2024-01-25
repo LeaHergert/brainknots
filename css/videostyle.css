@@ -234,8 +234,8 @@ background-color: var(--dark-grey);
 @media only screen and (max-width: 1100px) {
   
   .overlay, .overlay img, .slider {
-    height: 100vh; 
-    width: auto;
+    /* width: 100vw;  */
+    height: 100vh;
     
 }
  .slider-button{
@@ -260,11 +260,36 @@ background-color: var(--dark-grey);
   #overlay p {
     font-size: 1em;
   }
+  #btngroup {
+    
+    padding: 5px 0;
+   
+  }
+  #btngroup button {
+    font-size: 12px;
+    position: relative;
+  }
 
 }
 @media only screen and (max-width: 600px) {
-
-
+  .overlay, .overlay img, .slider {
+    width: 100vw; 
+    height: auto;
+    
+}
+  #btngroup {
+    
+    padding: 5px 0;
+   
+  }
+  #btngroup button {
+    font-size: 10px;
+    padding: 2px;
+    position: relative;
+  }
+  .prev, .next{
+    bottom: 5px;
+  }
 }
 @media (orientation: portrait) and (max-width: 600px) {
   #video-player {
@@ -300,5 +325,17 @@ background-color: var(--dark-grey);
       transform: translateY(-50%);
 
   }
-
+  .overlay, .overlay img, .slider {
+    width: 100vw; 
+    height: auto;
+  }
+  /* .btngroup {
+    padding: 5px;
+  } */
+  #btngroup .slider-button{
+    padding: 2px 10px;
+  }
+  .next, .prev {
+    font-size: 14px;
+  }
 }

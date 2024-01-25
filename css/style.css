@@ -60,7 +60,7 @@ li{
 }
 .bk p {
   margin: 0;
-  /* margin-top: -15px; */
+  margin-top: -15px;
 }
 .logo {
   color: var(--dark-grey);
@@ -78,7 +78,7 @@ li{
   text-align: center;
   text-transform: uppercase;
 }
-.explain::before {
+header .explain::before {
   background-color: rgb(0, 0, 0);
   /* border: aqua; */
   bottom: -2px;
@@ -88,7 +88,7 @@ li{
   position: absolute;
   width: 30%;
 }
-.explain::after {
+header .explain::after {
   background-color: rgb(0, 0, 0);
   /* border: aqua; */
   bottom: -2px;
@@ -323,6 +323,9 @@ align-items: center;
   text-decoration: none;
   padding: 1em 0;
   font-size: 14px;
+  max-width: 100%;
+  word-wrap: break-word;
+
 }
 
 .fullscreenSection {
@@ -724,12 +727,12 @@ footer .column a {
   font-weight: normal;
 }
 
-.drop svg {
+.svg1, .svg2, .svg3, .svg4{
   display: none;
   transform: rotate(-90deg);
 }
+
 .dropdown-content {
-  display: grid;
   gap: 10px;
 }
 
@@ -753,6 +756,7 @@ footer .column a {
     height: 40vh !important;
     margin: unset;
   }
+
 }
 
 /* Small devices (small laptops, tablets and phones, 1100px and down) */
@@ -889,7 +893,7 @@ grid-row: unset;
 }
 
 .videosection {
-  margin: 7vh 0 0 0;
+  padding: 7vh 0 0 0;
 }
   .videosection .text {
     padding: 5vh 20%;
@@ -911,6 +915,26 @@ grid-row: unset;
   .column > .row:not(:first-child) {
     padding-top: 0;
   }
+  #project {
+    width: 100%;
+  }
+  .info {
+    margin: 0;
+    width: 100%;
+  }
+
+  .section p {
+    width: 90%;
+  }
+
+  #project{
+    padding: 0;
+  }
+  #project .section {
+    justify-content: center;
+grid-template-columns: auto;  
+padding: 0 0 2em 0;
+}
 
   .bean .info{
     display: block;
@@ -976,15 +1000,21 @@ grid-row: unset;
   }
   .herobean {
     top: -20vh;
-    height: 80%;
+    height: 120vh;
     min-height: 70vh;
-    
+    right: 0;
+  }
+  .herobean img{
+    height: 120vh;
+    width: auto;
   }
   .herobean + .left {
     min-height: 50vh;
 }
  
-
+#bean{
+  height: auto;
+}
 }
 /* Extra small devices (phones, 400px and down) */
 @media only screen and (max-width: 600px) {
@@ -994,12 +1024,21 @@ grid-row: unset;
   .logo {
     font-size: 2em;
   }
-
+  .bk p {
+    
+    margin-top: -5px;
+}
+header .explain::before {
+  width: 20%;
+}
+header .explain::after {
+  width: 20%;
+}
   .drop {
     pointer-events: all;
     position: relative;
   }
-  .drop svg {
+  .svg1, .svg2, .svg3, .svg4{
     display: block;
   }
   .drop a {
@@ -1019,11 +1058,15 @@ grid-row: unset;
   #facts h2 {
     padding: 1em 0;
   }
-  /* #facts .column-wrapper{
-  grid-template-columns: 60%;
-} */
+  .herobean{
+    height: 210vw;
+  }
+  .herobean img{
+    
+    right: -50%;
+  }
   .dropdown-content {
-    /* display: none; */
+    display: none;
     gap: 15px;
     /* position: absolute;
     top: 100%;
@@ -1034,28 +1077,7 @@ grid-row: unset;
     width: 85%;
   }
 
-  #project {
-    width: 100%;
-  }
-  .info {
-    margin: 0;
-    width: 100%;
-  }
-  .section{
-    padding: 1em;
-  }
-  .section p {
-    width: 90%;
-  }
-
-  #project{
-    padding: 0;
-  }
-  #project .section {
-    justify-content: center;
-grid-template-columns: auto;  
-padding: 0 0 2em 0;
-}
+ 
 
   .divider > .column-wrapper {
     grid-template-columns: 80%;
@@ -1080,10 +1102,12 @@ padding: 0 0 2em 0;
     justify-content: center;
     margin: 0 auto;
   }
- svg{
+  #videobg > svg{
     width: 5em
   }
-
+  .left .info {
+  gap: 0;
+  }
   footer p {
     font-size: 1em;
     line-height: 1.25em;
@@ -1097,14 +1121,27 @@ padding: 0 0 2em 0;
     row-gap: 1em;
     width: 80%;
   }
-  /* .drop:hover .dropdown-content {
-    display: block;
- } */
+  .rotate{
+    transform: rotate(0) !important;
+  }
+  .display{
+    display: grid ;
+  }
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) { */
 footer p, footer .column-wrapper{
   font-size: 0.9em;
 }
+footer .column a{
+  font-size: 18px;
+}
 
+}
+@media (orientation: landscape)and (max-height: 800px) {
+  .herobean, .herobean img{
+height: 140vh;
+  }
+  .left .info {
+    gap: 0;
+    }
 }

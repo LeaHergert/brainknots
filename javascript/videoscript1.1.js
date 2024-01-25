@@ -65,7 +65,7 @@ var sliders = [
   {
     containerId: "slider7",
     images: [
-      "images/carousel/Slider7/1.Präsentationsersatz_ ED1.2.2_Bean-hat-sich-den-Tag-über-nicht-gut-gefühlt.jpg",
+      "images/carousel/Slider7/1.Praesentationsersatz_ED1.2.2_Bean-hat-sich-den-Tag-über.jpg",
       "images/carousel/Slider7/2.ED1.2.2_Bean-liegt-im-Bett-und-ist-am-Handy.jpg",
       "images/carousel/Slider7/3.ED1.2.2_Bean-ist-am-Handy-und-das-die-ganze-Nacht_Sprung-zu.jpg",
       "images/carousel/Slider7/3.ED1.2.2_Bean-ist-am-Handy-und-das-die-ganze-Nacht_Sprung-zu.jpg",
@@ -208,7 +208,7 @@ showImage(1, 0);
 
 
 
-var landscapeInstruction = document.getElementById("landscape-instruction");
+var landscapeInstruction = document.querySelector(".landscape-instruction");
 // Show landscape instruction if not in landscape mode
 if (screen.availHeight > screen.availWidth) {
   landscapeInstruction.style.display = "grid";
