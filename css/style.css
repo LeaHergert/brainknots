@@ -430,7 +430,6 @@ align-items: center;
   color: var(--dark-grey);
   display: grid;
   gap: 2em;
-  grid-template-rows: 50% 50%;
 }
 
 .green {
@@ -601,6 +600,13 @@ font-size: 14px;
 }
 .fact span {
   font-weight: 700;
+}
+
+.fact a{
+  max-width: 100%;
+  word-break: break-all;
+  font-size: 10px;
+  color: var(--bright-grey);
 }
 footer .column svg {
   height: 80px;

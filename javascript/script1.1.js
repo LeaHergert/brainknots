@@ -26,29 +26,7 @@ const mediaQuery = window.matchMedia("(max-width: 800px)");
 if (mediaQuery.matches) {
   facts.style.marginBottom = hHeight + "px";
 }
-// function drop(nr) {
-//   if (mediaQuery.matches) {
-//     const str = nr.toString();
 
-//     const content = document.getElementsByClassName("dropdown-content");
-//     const drop = document.querySelector("#drop" + str);
-//     const allDrop = document.getElementsByClassName("drop");
-//     const child = document.getElementById(str);
-//     const first = document.querySelector("#svg" + str);
-
-//     document.querySelectorAll(".dropdown-content").forEach((el) => {
-//       el.classList.remove('display');
-//     });
-//     document.querySelectorAll(".drop svg").forEach((el) => {
-//       el.classList.remove('rotate');
-//     });
-//     first.classList.toggle("rotate");
-//     child.classList.toggle("display");
-
-//     console.log("child: " + child.innerHTML);
-//     console.log("first: " + first.innerHTML);
-//   }
-// }
 
 function drop(nr) {
   if (mediaQuery.matches) {
