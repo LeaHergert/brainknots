@@ -31,7 +31,7 @@ var sliders = [
     containerId: "slider3",
     images: [
       { src: "images/carousel/Slider3/1.ED-1Bean-meldet-sich-krank.jpg", alt: '' },
-      { src: "images/carousel/Slider3/2.Übergangsweise-für-nach-Bean-meldet-sich-krank.jpg", alt: '' },
+      { src: "images/carousel/Slider3_/2.Nachrichtenlesen.jpg", alt: '' },
       { src: "images/carousel/Slider3/2.Übergangsweise-für-nach-Bean-meldet-sich-krank.jpg", alt: '' },
 
     ],
@@ -50,7 +50,7 @@ var sliders = [
       { src: "images/carousel/Slider5/1.ED1.1_Bean-verlässt-der-Mut-und-es-entscheidet-sich-nach-Hause-zu-gehen.jpg", alt: '' },
       { src: "images/carousel/Slider5/2.ED1.1_Bean-hat-wässrige-Augen-und-geht-nach-Hause.jpg", alt: '' },
       { src: "images/carousel/Slider5/3.ED1.1_Bean-legt-sich-schlafen-am-Tag.jpg", alt: '' },
-      { src: "images/carousel/Slider5/3.ED1.1_Bean-legt-sich-schlafen-am-Tag.jpg", alt: '' },
+      { src: "images/carousel/Slider5/images/carousel/Slider5_/4.Nachrichtenlesen.jpg", alt: '' },
 
     ],
   },
@@ -70,6 +70,94 @@ var sliders = [
       { src: "images/carousel/Slider7/3.ED1.2.2_Bean-ist-am-Handy-und-das-die-ganze-Nacht_Sprung-zu.jpg", alt: '' },
       { src: "images/carousel/Slider7/3.ED1.2.2_Bean-ist-am-Handy-und-das-die-ganze-Nacht_Sprung-zu.jpg", alt: '' },
 
+    ],
+  },
+  {
+    containerId: "slider8",
+    images: [
+      { src: "images/carousel/Slider8/1.BeanlaechendimBett.jpg", alt: '' },
+      { src: "images/carousel/Slider8/2.Beanantwortet.jpg", alt: '' },
+      { src: "images/carousel/Slider8/3.Beanmachtsichfertig.jpg", alt: '' },
+      { src: "images/carousel/Slider8/", alt: '' },
+
+    ],
+  },
+  {
+    containerId: "slider9",
+    images: [
+      { src: "images/carousel/Slider9/1.BeankommtlaechelndinsZimmer.jpg", alt: '' },
+      { src: "images/carousel/Slider9/2.Beanlegtsichschlafen.jpg", alt: '' },
+      { src: "images/carousel/Slider9/Sequenzende.jpg", alt: '' },
+      { src: "images/carousel/Slider9/", alt: '' },
+
+    ],
+  },
+  {
+    containerId: "slider10",
+    images: [
+      { src: "images/carousel/Slider10/1.Beankehrtzurueckisterschoepft.jpg", alt: '' },
+      { src: "images/carousel/Slider10/2_BeanamHandy_Nachts.jpg", alt: '' },
+      { src: "images/carousel/Slider10/3.BeandieganzeNachtamHandy.jpg", alt: '' },
+
+    ],
+  },
+  {
+    containerId: "slider11",
+    images: [
+      { src: "images/carousel/Slider11/1.Chat_Beanprobiertzuantworten.jpg", alt: '' },
+      { src: "images/carousel/Slider11/2_Esprobiertzuschlafen.jpg", alt: '' },
+      { src: "images/carousel/Slider11/3.BeanamHandy-Nachts.jpg", alt: '' },
+      { src: "images/carousel/Slider11/4.BeanganzeNachtaufgewesen.jpg", alt: '' },
+      { src: "images/carousel/Slider11/5.Beanprobiertzuschlafen_morgens.jpg", alt: '' },
+
+
+    ],
+  },
+  {
+    containerId: "slider12",
+    images: [
+      { src: "images/carousel/Slider12/1.FreudeueberdieNachricht_BeanlachtimBett.jpg", alt: '' },
+      { src: "images/carousel/Slider12/2.Textnachricht_Antwortet.jpg", alt: '' },
+      { src: "images/carousel/Slider12/3.AufdemWegzuseinenFreunden.jpg", alt: '' },
+      { src: "images/carousel/Slider12/4.BeantrifftFreunde_SitzenimCafe.jpg", alt: '' },
+
+    ],
+  },
+  {
+    containerId: "slider13",
+    images: [
+      { src: "images/carousel/Slider13/1.BeanhatAngstseinenFreundenwasmitzuteilen_SitzenimCafe.jpg", alt: '' },
+      { src: "images/carousel/Slider13/images/carousel/Slider13/2.FreunderedenBeangutzu_SitzenimCafe.jpg", alt: '' },
+      { src: "images/carousel/Slider13/3.BeanalleinebeimArzt.jpg", alt: '' },
+      { src: "images/carousel/Slider13/4.Dr.Egg-Bean_imZimmer_reden.jpg", alt: '' },
+      { src: "images/carousel/Slider13/5.Beanspaziert_fühltsichbesser.jpg", alt: '' },
+      { src: "images/carousel/Slider13/Sequenzende.jpg", alt: '' },
+
+
+    ],
+  },
+  {
+    containerId: "slider14",
+    images: [
+      { src: "images/carousel/Slider14/1.BeanimZimmer_Müde-unsicher.jpg", alt: '' },
+      { src: "images/carousel/Slider14/2.BeanschreibtinsNotizbuch.jpg", alt: '' },
+      { src: "images/carousel/Slider14/SequenzEnde.jpg", alt: '' },
+
+    ],
+  },
+  {
+    containerId: "slider15",
+    images: [
+      { src: "images/carousel/Slider15/1.BeanHatKeineKraftMehr_bleibtimBettliegen.jpg", alt: '' },
+      { src: "images/carousel/Slider15/2.BlickzumBild.jpg", alt: '' },
+      { src: "images/carousel/Slider15/3.BeanliegtimBett.jpg", alt: '' },
+      { src: "images/carousel/Slider15/4.BeanschautindenSpiegel.jpg", alt: '' },
+      { src: "images/carousel/Slider15/5.SuchenachTherapiePlätzen.jpg", alt: '' },
+      { src: "images/carousel/Slider15/6.BeanalleinebeimArzt.jpg", alt: '' },
+      { src: "images/carousel/Slider15/7.Dr.Egg-Bean_imZimmer_reden.jpg", alt: '' },
+      { src: "images/carousel/Slider15/8.Beanspaziert_fühltsichbesser.jpg", alt: '' },
+      { src: "images/carousel/Slider15/Sequenzende.jpg", alt: '' },
+    
     ],
   },
 ];
